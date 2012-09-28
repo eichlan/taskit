@@ -28,6 +28,12 @@ class DashboardController extends Controller
 
 	public function actionIndex( $page=0 )
 	{
+		if( Yii::app()->user->getModel()->teams == NULL ||
+	   		count(Yii::app()->user->getModel()->teams) == 0 )
+		{
+			$this->redirect('/settings/structure');
+			return;
+		}
 		$vr = new ViewRenderer( $this, UserView::secDashboard, $page,
 			'dashboard/index', array() );
 		$vr->render();
