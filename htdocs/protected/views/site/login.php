@@ -8,6 +8,7 @@ $this->breadcrumbs=array(
 <h1>Welcome to Taskit</h1>
 <p>Taskit is an awesome Task management system with deep customization.  It's also free!<p>
 <p>Taskit is currently in early development, we do not gurantee the safety of your data.</p>
+<p>Taskit is on <a href="https://github.com/eichlan/taskit">GitHub</a>!  Check it out!</p>
 <?php if( Yii::app()->params['anonInvites'] ) { ?>
 <script type="text/javascript">
 function newInv()
